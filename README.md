@@ -4,7 +4,7 @@ Create a form that takes some input from the user, then create the PHP script th
 
 ![p](https://github.com/bell-kevin/chap2pursuePHP/blob/main/pacificTrailsReservations.PNG)
 
-      Hint: Your file will need to be PacificTrails.php and runs with the URL: http://localhost/PacificTrails.php
+ Hint: Your file will need to be PacificTrails.php and runs with the URL: http://localhost/PacificTrails.php
 
  Rewrite handle_form.php (Script 2.4) to:
  
