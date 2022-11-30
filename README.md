@@ -14,6 +14,8 @@ Rewrite the gender conditional  as one conditional instead of two nested ones. H
 Use $_POST instead of $_REQUEST.
 Validate the age element. Hint: Use the $gender validation as a template, this time checking against the corresponding pull-down option values (0-29, 30-60, 60+).
 
+![i](https://github.com/bell-kevin/chap2pursuePHP/blob/main/noCSSreservations.PNG)
+
 Submission: Submit a zip file containing your two PHP scripts; in addition submit .PNG screenshots that demonstrate each part of these scripts running in a browser window.
 
 == We're Using GitHub Under Protest ==
