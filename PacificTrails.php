@@ -12,6 +12,11 @@
     $lastName = $_POST['lastName'];
     $email = $_POST['email'];
     $comments = $_POST['comments'];
+    $phone = $_POST['phone'];
+    $gender = $_POST['gender'];
+    $age = $_POST['age'];
+    $arrivalDate = $_POST['arrivalDate'];
+    $nights = $_POST['nights'];
 
     //validate the first name
     if (!empty($firstName)) {
@@ -53,20 +58,80 @@
         echo '<p>You forgot to enter your comments!</p>';
     }
 
+    //validate the phone
+    if (!empty($phone)) {
+        $phone = trim($phone);
+        $phone = stripslashes($phone);
+        $phone = htmlspecialchars($phone);
+    } else {
+        $phone = NULL;
+        echo '<p>You forgot to enter your phone!</p>';
+    }
 
+    //validate the age
+    if (!empty($age)) {
+        $age = trim($age);
+        $age = stripslashes($age);
+        $age = htmlspecialchars($age);
+    } else {
+        $age = NULL;
+        echo '<p>You forgot to enter your age!</p>';
+    }
 
+    //validate the arrival date
+    if (!empty($arrivalDate)) {
+        $arrivalDate = trim($arrivalDate);
+        $arrivalDate = stripslashes($arrivalDate);
+        $arrivalDate = htmlspecialchars($arrivalDate);
+    } else {
+        $arrivalDate = NULL;
+        echo '<p>You forgot to enter your arrival date!</p>';
+    }
 
-if (!empty($_POST['firstName']) && !empty($_POST['lastName']) && !empty($_POST['comments']) && !empty($_POST['email'])) {
-    echo "<p>Thank you, <b>{$_POST['firstName']}</b> <b>{$_POST['lastName']}</b>, for the following comments:</p>
+    //validate the nights
+    if (!empty($nights)) {
+        $nights = trim($nights);
+        $nights = stripslashes($nights);
+        $nights = htmlspecialchars($nights);
+    } else {
+        $nights = NULL;
+        echo '<p>You forgot to enter your nights!</p>';
+    }
+
+    //validate the gender
+    if (isset($_POST['gender'])){
+        $gender = $_POST['gender'];
     
-    for the following comments:<br />
-    <tt>{$_POST['comments']}</tt></p>
-    <p>We will reply to you at <i>{$_POST['email']}</i>.</p>\n";
+        if ($gender == 'M') {
+            $greeting = '<p><b>Good day, Sir!</b></p>';
+        } elseif ($gender == 'F') {
+            $greeting = '<p><b>Good day, Madam!</b></p>';
+        } else { // Unacceptable value.
+            $gender = NULL;
+            echo '<p><b>Your gender submission is not valid.</b></p>';
+        }
+    } else {
+        $gender = NULL;
+        echo '<p><b>You forgot to select your gender.</b></p>';
+    }
+    
+
+
+
+
+if (!empty($_POST['firstName']) && !empty($_POST['lastName']) && !empty($_POST['comments']) && !empty($_POST['email']) && !empty($_POST['phone']) && !empty($_POST['age']) 
+&& !empty($_POST['arrivalDate']) && !empty($_POST['nights']) && !empty($_POST['gender'])) {
+    echo "<p>Thank you, <b>$firstName $lastName</b>, for the following comments:<br />
+    <tt>$comments</tt></p>
+    <p>We will reply to you at <i>$email</i>.</p>\n";
+    echo "<p>Phone: $phone</p>\n";
+    echo "<p>Age: $age</p>\n";
+    echo "<p>Arrival Date: $arrivalDate</p>\n";
+    echo "<p>Nights: $nights</p>\n";
+    echo $greeting;
+} else {
+    echo '<p>Please go back and fill out the form again.</p>';
 }
-
-
-
-//end file
 ?>
 </body>
 </html>
