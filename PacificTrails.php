@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Form Feedback</title>
 </head>
-<body>
-<?php // Script 2.5 - handle_form.php
 
-// Create a shorthand for the form data:
+<body>
+    <?php
+    // Create a shorthand for the form data:
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $email = $_POST['email'];
@@ -69,12 +70,14 @@
     }
 
     //validate the age
-    if (!empty($age)) {
-        $age = trim($age);
-        $age = stripslashes($age);
-        $age = htmlspecialchars($age);
+    if (isset($_POST['age']) && $age = 'Under 30') {
+        $salutation  = '<p><b>Your age is less than 30!</b></p>';
+    } elseif (isset($_POST['age']) && $age = 'Between 30 and 60') {
+        $salutation  = '<p><b>Your age is between 30 and 60!</b></p>';
+    } elseif (isset($_POST['age']) && $age = 'Over 60') {
+        $salutation  = '<p><b>Your age is over 60!</b></p>';
     } else {
-        $age = NULL;
+        $salutation  = NULL;
         echo '<p>You forgot to enter your age!</p>';
     }
 
@@ -99,39 +102,31 @@
     }
 
     //validate the gender
-    if (isset($_POST['gender'])){
-        $gender = $_POST['gender'];
-    
-        if ($gender == 'M') {
-            $greeting = '<p><b>Good day, Sir!</b></p>';
-        } elseif ($gender == 'F') {
-            $greeting = '<p><b>Good day, Madam!</b></p>';
-        } else { // Unacceptable value.
-            $gender = NULL;
-            echo '<p><b>Your gender submission is not valid.</b></p>';
-        }
-    } else {
+    if (isset($_POST['gender']) && $gender = 'M') {
+        $greeting = '<p><b>Good day, Sir!</b></p>';
+    } elseif (isset($_POST['gender']) && $gender = 'F') {
+        $greeting = '<p><b>Good day, Madam!</b></p>';
+    } else { // Unacceptable value.
         $gender = NULL;
-        echo '<p><b>You forgot to select your gender.</b></p>';
+        echo '<p><b>Your gender submission is not valid.</b></p>';
     }
-    
 
-
-
-
-if (!empty($_POST['firstName']) && !empty($_POST['lastName']) && !empty($_POST['comments']) && !empty($_POST['email']) && !empty($_POST['phone']) && !empty($_POST['age']) 
-&& !empty($_POST['arrivalDate']) && !empty($_POST['nights']) && !empty($_POST['gender'])) {
-    echo "<p>Thank you, <b>$firstName $lastName</b>, for the following comments:<br />
+    if (
+        !empty($_POST['firstName']) && !empty($_POST['lastName']) && !empty($_POST['comments']) && !empty($_POST['email']) && !empty($_POST['phone'])
+        && !empty($_POST['age']) && !empty($_POST['arrivalDate']) && !empty($_POST['nights']) && !empty($_POST['gender'])
+    ) {
+        echo "<p>Thank you, <b>$firstName $lastName</b>, for the following comments:<br />
     <tt>$comments</tt></p>
     <p>We will reply to you at <i>$email</i>.</p>\n";
-    echo "<p>Phone: $phone</p>\n";
-    echo "<p>Age: $age</p>\n";
-    echo "<p>Arrival Date: $arrivalDate</p>\n";
-    echo "<p>Nights: $nights</p>\n";
-    echo $greeting;
-} else {
-    echo '<p>Please go back and fill out the form again.</p>';
-}
-?>
+        echo "<p>Phone: $phone</p>\n";
+        echo "<p>Arrival Date: $arrivalDate</p>\n";
+        echo "<p>Nights: $nights</p>\n";
+        echo $greeting;
+        echo $salutation;
+    } else {
+        echo '<p>Please go back and fill out the form again.</p>';
+    }
+    ?>
 </body>
+
 </html>
