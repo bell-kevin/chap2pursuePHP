@@ -18,6 +18,8 @@ Validate the age element. Hint: Use the $gender validation as a template, this t
 
 Submission: Submit a zip file containing your two PHP scripts; in addition submit .PNG screenshots that demonstrate each part of these scripts running in a browser window.
 
+![u](https://github.com/bell-kevin/chap2pursuePHP/blob/main/results.PNG)
+
 == We're Using GitHub Under Protest ==
 
 This project is currently hosted on GitHub.  This is not ideal; GitHub is a
