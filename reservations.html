@@ -1,83 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Pacific Trails Resort :: Reservations </title>
-<meta charset= "utf-8">
-<!-- <link rel="stylesheet" href="pacific.css"> -->
-<meta name="viewport" width="device-width, initial-scale=1.0">
-<!--[if lt IE 9]>
+	<title>Pacific Trails Resort :: Reservations </title>
+	<meta charset="utf-8">
+	<!-- <link rel="stylesheet" href="pacific.css"> -->
+	<meta name="viewport" width="device-width, initial-scale=1.0">
+	<!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
 </script>
 <![endif]-->
 </head>
 
 <body>
-<div id="wrapper">
-	<header>
-	  <h1>Pacific Trails Resort</h1>
-	</header>
-	<nav>
-	  <ul>
-		<li><a href="index.html">Home</a></li>
-		<li><a href="yurts.html">Yurts</a></li>
-		<li><a href="activities.html">Activities</a></li>
-		<li><a href="reservations.html">Reservations</a></li>
-	  </ul>
-	</nav>
-	
-<div id="content">
-	<h2>Reservations at Pacific Trails</h2>
-	<h3>Contact Us Today!</h3>
-	  <p>Required fields are marked with an asterisk*.</p>
-<form method="post" action="https://localhost/PacificTrails.php">
+	<div id="wrapper">
+		<header>
+			<h1>Pacific Trails Resort</h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="yurts.html">Yurts</a></li>
+				<li><a href="activities.html">Activities</a></li>
+				<li><a href="reservations.html">Reservations</a></li>
+			</ul>
+		</nav>
 
-<fieldset><legend>Enter your information in the form below:</legend>
+		<div id="content">
+			<h2>Reservations at Pacific Trails</h2>
+			<h3>Contact Us Today!</h3>
+			<p>Required fields are marked with an asterisk*.</p>
+			<form method="post" action="https://localhost/PacificTrails.php">
 
-	<p><label>First Name: <input type="text" name="firstName" size="20" maxlength="40"></label></p>
+				<fieldset>
+					<legend>Enter your information in the form below:</legend>
 
-	<p><label>Last Name: <input type="text" name="lastName" size="20" maxlength="40"></label></p>
-	
-	<p><label>Email Address: <input type="text" name="email" size="40" maxlength="60"></label></p>
+					<p><label>First Name: <input type="text" name="firstName" size="20" maxlength="40"></label></p>
 
-	<p><label>Phone: <input type="tel" name="phone" size="20" maxlength="20"></label></p>
+					<p><label>Last Name: <input type="text" name="lastName" size="20" maxlength="40"></label></p>
 
-	<p><label>Arrival Date: <input type="date" name="arrivalDate" size="20" maxlength="20"></label></p>
+					<p><label>Email Address: <input type="text" name="email" size="40" maxlength="60"></label></p>
 
-	<p><label>Nights: <input type="number" name="nights" min="1" max="14"></label></p>
-	
-	<p><label for="gender">Gender: </label><input type="radio" name="gender" value="M"> Male
-	
-	<input type="radio" name="gender" value="F"> Female</p>
-	
-	<p><label>Age:
-	<select name="age">
-		<option value="0-29">Under 30</option>
-		<option value="30-60">Between 30 and 60</option>
-		<option value="60+">Over 60</option>
-	</select></label></p>
-	
-	<p><label>Comments: <textarea name="comments" rows="3" cols="40"></textarea></label></p>
-	
-	</fieldset>
-	
-	<div align="center"><input type="submit" name="submit" value="Submit My Information"></div>
+					<p><label>Phone: <input type="tel" name="phone" size="20" maxlength="20"></label></p>
 
-</form>
-  
- <div id="contact">
-	  <p><span class="resort">Pacific Trails Resort</span> <br>
-							  12010 Pacific Trails Road<br>
-							  Zephyr, CA 95555<br><br>
-	  <a id="mobile" href="tel:888-555-5555">888-555-5555</a>
-	  <span id="desktop">888-555-5555</span>
-	  </p>
-</div> 
-</div> 
-<footer>
-    Copyright &copy; 2014 Pacific Trails Resort
-	<br>
-		<a href="mailto:foo@foo.foo">info@PacificTrails.com</a>
-</footer>
-</div>
+					<p><label>Arrival Date: <input type="date" name="arrivalDate" size="20" maxlength="20"></label></p>
+
+					<p><label>Nights: <input type="number" name="nights" min="1" max="14"></label></p>
+
+					<p><label for="gender">Gender: </label><input type="radio" name="gender" value="M"> Male
+
+						<input type="radio" name="gender" value="F"> Female
+					</p>
+
+					<p><label>Age:
+							<select name="age">
+								<option value="0-29">Under 30</option>
+								<option value="30-60">Between 30 and 60</option>
+								<option value="60+">Over 60</option>
+							</select></label></p>
+
+					<p><label>Comments: <textarea name="comments" rows="3" cols="40"></textarea></label></p>
+
+				</fieldset>
+
+				<div align="center"><input type="submit" name="submit" value="Submit My Information"></div>
+
+			</form>
+
+			<div id="contact">
+				<p><span class="resort">Pacific Trails Resort</span> <br>
+					12010 Pacific Trails Road<br>
+					Zephyr, CA 95555<br><br>
+					<a id="mobile" href="tel:888-555-5555">888-555-5555</a>
+					<span id="desktop">888-555-5555</span>
+				</p>
+			</div>
+		</div>
+		<footer>
+			Copyright &copy; 2014 Pacific Trails Resort
+			<br>
+			<a href="mailto:foo@foo.foo">info@PacificTrails.com</a>
+		</footer>
+	</div>
 </body>
+
 </html>
