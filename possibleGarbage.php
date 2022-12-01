@@ -120,6 +120,7 @@ if (!empty($_POST['firstName']) && !empty($_POST['lastName']) && !empty($_POST['
     echo "<p>Arrival Date: $arrivalDate</p>\n";
     echo "<p>Nights: $nights</p>\n";
     echo "<p>Gender: $gender</p>\n";
+}
 ?>
 </body>
 </html>
