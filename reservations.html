@@ -30,70 +30,20 @@
 	<h3>Contact Us Today!</h3>
 	  <p>Required fields are marked with an asterisk*.</p>
 <form method="post" action="https://localhost/PacificTrails.php">
-<div>
-	<label for="myFName">*First Name:</label>
-	<input type="text" name="myFName" id="myFName"required="required">
-</div>
-<div>
-	<label for="myLName">*Last Name:</label>
-	<input type="text" name="myLName" id="myLName" required="required">
-</div>
-<div>
-	<label for="myEmail">*E-Mail:</label>
-	<input type="email" name="myEmail" id="myEmail" size="40" maxlength="20" required="required">
-</div>
-<div>
-	<label for="myPhone">Phone:</label>
-	<input type="tel" name="myPhone" id="myPhone" maxlength="12">
-</div>
-<div>
-	<label for="myDate">Arrival Date:</label>
-	<input type="date" name="myDate" id="myDate">
-</div>
-<div>
-	<label for="myNights">Nights:</label>
-	<input type="number" name="myNights" id="myNights" min="1" max="14">
-</div>
-
-
-<div>
-	<label for="myComments">*Comments:</label>
-	<textarea name="myComments" id="myComments" rows="2" cols="42"
-        required="required" placeholder="comments"></textarea>
-</div>
-<!-- radio buttons for gender -->
-<div>
-		<label for="myGender">Gender:</label>
-		<input type="radio" name="myGenderMale" id="myGenderMale" value="M"> Male
-		<input type="radio" name="myGenderFemale" id="myGenderFemale" value="F"> Female	
-</div>
-<div>
-	<label for="myAge">Age
-	<select name="myAge" id="myAge">
-		<option value="0-29">Under 30</option>
-		<option value="30-60">30 to 60</option>
-		<option value="60+">Over 60</option>
-	</select>
-	</label><br><br>	
-</div>
-
-
-
-
-
-
-
-
-
-
 
 <fieldset><legend>Enter your information in the form below:</legend>
 
-	<p><label>firstName: <input type="text" name="firstName" size="20" maxlength="40"></label></p>
+	<p><label>First Name: <input type="text" name="firstName" size="20" maxlength="40"></label></p>
 
-	<p><label>lastName: <input type="text" name="lastName" size="20" maxlength="40"></label></p>
+	<p><label>Last Name: <input type="text" name="lastName" size="20" maxlength="40"></label></p>
 	
 	<p><label>Email Address: <input type="text" name="email" size="40" maxlength="60"></label></p>
+
+	<p><label>Phone: <input type="tel" name="phone" size="20" maxlength="20"></label></p>
+
+	<p><label>Arrival Date: <input type="date" name="arrivalDate" size="20" maxlength="20"></label></p>
+
+	<p><label>Nights: <input type="number" name="nights" min="1" max="14"></label></p>
 	
 	<p><label for="gender">Gender: </label><input type="radio" name="gender" value="M"> Male
 	
@@ -112,21 +62,6 @@
 	
 	<div align="center"><input type="submit" name="submit" value="Submit My Information"></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-<div>
-	<input type="submit" value="Submit">
-</div>
 </form>
   
  <div id="contact">
